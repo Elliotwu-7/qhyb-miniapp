@@ -1,0 +1,27 @@
+{
+  "name": "青保查",
+  "appid": "__UNI__YIBAOQUERY",
+  "description": "检索青海公开价格目录的项目名称、编码、价格和停用状态。数据来源：公开渠道。",
+  "versionName": "1.0.0",
+  "versionCode": "100",
+  "transformPx": false,
+  "mp-weixin": {
+    "appid": "wx38caf724f6f31625",
+    "lazyCodeLoading": "requiredComponents",
+    "darkmode": true,
+    "setting": {
+      "urlCheck": true,
+      "minified": true,
+      "minifyJS": true,
+      "minifyWXML": true,
+      "minifyWXSS": true,
+      "lazyCodeLoading": "requiredComponents"
+    },
+    "usingComponents": true,
+    "sitemapLocation": "sitemap.json",
+    "permission": {},
+    "requiredPrivateInfos": [],
+    "__usePrivacyCheck__": true
+  },
+  "vueVersion": "3"
+}

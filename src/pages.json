@@ -1,0 +1,99 @@
+{
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^wd-(.*)": "@wot-ui/ui/components/wd-$1/wd-$1.vue"
+    }
+  },
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "青保查",
+        "enablePullDownRefresh": false,
+        "onReachBottomDistance": 300
+      }
+    },
+    {
+      "path": "pages/me/me",
+      "style": {
+        "navigationBarTitleText": "我的"
+      }
+    },
+    {
+      "path": "pages/register/register",
+      "style": {
+        "navigationBarTitleText": "登录"
+      }
+    },
+    {
+      "path": "pages/about/about",
+      "style": {
+        "navigationBarTitleText": "关于与声明"
+      }
+    },
+    {
+      "path": "pages/detail/detail",
+      "style": {
+        "navigationBarTitleText": "项目详情"
+      }
+    },
+    {
+      "path": "pages/label/label",
+      "style": {
+        "navigationBarTitleText": "药品说明书"
+      }
+    },
+    {
+      "path": "pages/guide/guide",
+      "style": {
+        "navigationBarTitleText": "目录原文"
+      }
+    },
+    {
+      "path": "pages/spec/spec",
+      "style": {
+        "navigationBarTitleText": "技术规范"
+      }
+    },
+    {
+      "path": "pages/graph/graph",
+      "style": {
+        "navigationBarTitleText": "关联网络"
+      }
+    },
+    {
+      "path": "pages/ref/ref",
+      "style": {
+        "navigationBarTitleText": "参考资料汇编"
+      }
+    }
+  ],
+  "tabBar": {
+    "color": "#6b7280",
+    "selectedColor": "#2660ff",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "查询",
+        "iconPath": "static/tab-search.png",
+        "selectedIconPath": "static/tab-search-active.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "static/tab-me.png",
+        "selectedIconPath": "static/tab-me-active.png"
+      }
+    ]
+  },
+  "darkmode": true,
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "青保查",
+    "navigationBarBackgroundColor": "#F5F8FC",
+    "backgroundColor": "#F5F8FC"
+  }
+}

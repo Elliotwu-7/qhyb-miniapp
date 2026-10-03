@@ -1,0 +1,31 @@
+{
+  "setting": {
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "minifyJS": true,
+    "minifyWXML": true,
+    "minifyWXSS": true,
+    "lazyCodeLoading": "requiredComponents",
+    "uglifyFileName": false,
+    "enhance": true,
+    "packNpmRelationList": [],
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useCompilerPlugins": false
+  },
+  "compileType": "miniprogram",
+  "simulatorPluginLibVersion": {},
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "appid": "wx38caf724f6f31625",
+  "projectname": "qhyb-miniapp",
+  "miniprogramRoot": "dist/build/mp-weixin/",
+  "srcMiniprogramRoot": "dist/build/mp-weixin/",
+  "editorSetting": {}
+}

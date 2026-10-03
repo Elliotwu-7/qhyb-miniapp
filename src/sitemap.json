@@ -1,0 +1,9 @@
+{
+  "desc": "青保查",
+  "rules": [
+    {
+      "action": "allow",
+      "page": "*"
+    }
+  ]
+}

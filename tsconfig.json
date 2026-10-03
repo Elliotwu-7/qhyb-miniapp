@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "jsx": "preserve",
+    "skipLibCheck": true,
+    "types": ["@dcloudio/types", "@wot-ui/ui/global"]
+  },
+  "include": ["**/*.ts", "**/*.vue", "env.d.ts"]
+}

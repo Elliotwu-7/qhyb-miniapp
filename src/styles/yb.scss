@@ -1,0 +1,1410 @@
+page {
+  --yb-primary: #2660ff;
+  --yb-primary-soft: #edf2ff;
+  --yb-bg: #f5f8fc;
+  --yb-surface: #ffffff;
+  --yb-text: #1a1d26;
+  --yb-text-2: #4e5969;
+  --yb-text-3: #5c6470;
+  --yb-border: #e6e8eb;
+  --yb-stop-bg: #2b3038;
+  --yb-merge: #b54708;
+  --yb-merge-bg: #fff4e5;
+  --yb-danger: #d92d20;
+  --yb-now: #16a34a;
+  --yb-now-strong: #15803d;
+  --yb-future: #2563eb;
+  --yb-search-border: #dfe3ea;
+  --yb-search-shadow: 0 16rpx 56rpx rgba(26, 45, 90, 0.08);
+  --yb-search-focus-border: #9db4ff;
+  --yb-search-focus-shadow: 0 20rpx 64rpx rgba(38, 96, 255, 0.16);
+  --yb-icon-muted: #7b8494;
+  --yb-clear-bg: #eef1f6;
+  --yb-chip-border: #e3e7ee;
+  --yb-chip-on-border: #c9d6ff;
+  --yb-chip-x: #98a1af;
+  --yb-chip-x-hover-bg: rgba(26, 29, 38, 0.06);
+  --yb-level-track: #e8edf5;
+  --yb-notice-bg: #eef4ff;
+  --yb-notice-fg: #1e3a8a;
+  --yb-soon-bg: #fff7ed;
+  --yb-soon-fg: #9a3412;
+  --yb-soon-border: #f5c07a;
+  --yb-now-bg: #ccfbf1;
+  --yb-now-fg: #0f766e;
+  --yb-now-banner-bg: #f0fdfa;
+  --yb-now-banner-fg: #115e59;
+  --yb-now-banner-border: #5eead4;
+  --yb-pending-bg: #dbeafe;
+  --yb-pending-fg: #1e40af;
+  --yb-pending-banner-bg: #eff6ff;
+  --yb-pending-banner-fg: #1e3a8a;
+  --yb-pending-border: #93c5fd;
+  --yb-card-stopped-bg: #f3f4f6;
+  --yb-card-stopped-border: #cfd3d8;
+  --yb-card-merged-border: #f5c07a;
+  --yb-card-soon-border: #5eead4;
+  --yb-card-pending-bg: #f8fbff;
+  --yb-card-pending-border: #93c5fd;
+  --yb-cta-merge-bg: #fff7ed;
+  --yb-cta-merge-fg: #9a3412;
+  --yb-cta-stop-bg: #b42318;
+  --yb-cta-stop-fg: #ffffff;
+  --yb-alert-danger-bg: #b42318;
+  --yb-alert-danger-fg: #ffffff;
+  --yb-price-blocked: #1e3a8a;
+  --yb-stopped-title: #6b7280;
+  --yb-merge-note: #9a3412;
+  --yb-history-rail: #e6e8eb;
+  --yb-history-old: #9aa3af;
+  --yb-banner-merge-fg: #7a2e0e;
+  --yb-banner-merge-border: #f5c07a;
+  --yb-btn: #2660ff;
+  --yb-btn-fg: #ffffff;
+  color: var(--yb-text);
+  background: var(--yb-bg);
+  font-size: 28rpx;
+  line-height: 1.5;
+}
+
+page.theme-dark,
+.theme-dark {
+  --yb-primary: #7aa0ff;
+  --yb-primary-soft: #1a2748;
+  --yb-bg: #0f141c;
+  --yb-surface: #1a2030;
+  --yb-text: #e8ecf4;
+  --yb-text-2: #b4bdcc;
+  --yb-text-3: #8b95a8;
+  --yb-border: #2c3548;
+  --yb-stop-bg: #3a414d;
+  --yb-merge: #f0a05a;
+  --yb-merge-bg: #3a2714;
+  --yb-danger: #f97066;
+  --yb-now: #4ade80;
+  --yb-now-strong: #86efac;
+  --yb-future: #60a5fa;
+  --yb-search-border: #334056;
+  --yb-search-shadow: 0 16rpx 56rpx rgba(0, 0, 0, 0.35);
+  --yb-search-focus-border: #7aa0ff;
+  --yb-search-focus-shadow: 0 20rpx 64rpx rgba(38, 96, 255, 0.28);
+  --yb-icon-muted: #8b95a8;
+  --yb-clear-bg: #2a3346;
+  --yb-chip-border: #334056;
+  --yb-chip-on-border: #3d5aa8;
+  --yb-chip-x: #8b95a8;
+  --yb-chip-x-hover-bg: rgba(255, 255, 255, 0.08);
+  --yb-level-track: #222a3a;
+  --yb-notice-bg: #1a2748;
+  --yb-notice-fg: #bfdbfe;
+  --yb-soon-bg: #3a2714;
+  --yb-soon-fg: #fdba74;
+  --yb-soon-border: #9a5b1a;
+  --yb-now-bg: #0f3d36;
+  --yb-now-fg: #5eead4;
+  --yb-now-banner-bg: #0f3d36;
+  --yb-now-banner-fg: #99f6e4;
+  --yb-now-banner-border: #2dd4bf;
+  --yb-pending-bg: #1e3a5f;
+  --yb-pending-fg: #93c5fd;
+  --yb-pending-banner-bg: #172554;
+  --yb-pending-banner-fg: #bfdbfe;
+  --yb-pending-border: #3b82f6;
+  --yb-card-stopped-bg: #1c212b;
+  --yb-card-stopped-border: #3d4450;
+  --yb-card-merged-border: #9a5b1a;
+  --yb-card-soon-border: #2dd4bf;
+  --yb-card-pending-bg: #152033;
+  --yb-card-pending-border: #3b82f6;
+  --yb-cta-merge-bg: #3a2714;
+  --yb-cta-merge-fg: #fdba74;
+  --yb-cta-stop-bg: #b91c1c;
+  --yb-cta-stop-fg: #ffffff;
+  --yb-alert-danger-bg: #b91c1c;
+  --yb-alert-danger-fg: #ffffff;
+  --yb-price-blocked: #93c5fd;
+  --yb-stopped-title: #9aa3af;
+  --yb-merge-note: #fdba74;
+  --yb-history-rail: #334056;
+  --yb-history-old: #6b7280;
+  --yb-banner-merge-fg: #fdba74;
+  --yb-banner-merge-border: #9a5b1a;
+  --yb-btn: #7aa0ff;
+  --yb-btn-fg: #0f141c;
+}
+
+.yb-page {
+  min-height: 100vh;
+  padding: 24rpx 32rpx calc(48rpx + env(safe-area-inset-bottom));
+  background: var(--yb-bg);
+  color: var(--yb-text);
+}
+
+.hero-copy {
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+  margin: 8rpx 0 28rpx;
+  text-align: left;
+}
+
+.hero-logo {
+  display: block;
+  flex: none;
+  width: 96rpx;
+  height: 96rpx;
+  margin: 0;
+  border-radius: 50%;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-kicker {
+  margin: 0 0 6rpx;
+  color: var(--yb-text-3);
+  font-size: 24rpx;
+  letter-spacing: 0.08em;
+}
+
+.hero-copy .hero-title {
+  margin: 0;
+  font-size: 40rpx;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.hero-meta,
+.muted {
+  color: var(--yb-text-3);
+}
+
+.hero-meta {
+  margin: 28rpx 0 0;
+  font-size: 24rpx;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* 搜索状态下的顶栏：返回首页钉在最上面最左侧。以前这颗按钮在搜索框和范围栏下面，而且
+   完全没有任何样式 —— 字面就是个裸的「‹ 返回首页」，所以看着丑。现在按小程序里其它
+   胶囊的同一套长相做：surface 底、chip 描边、999rpx 圆角、按下缩一下。 */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16rpx;
+  margin: 0 0 20rpx;
+}
+
+.back-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 12rpx;
+  min-height: 64rpx;
+  padding: 0 26rpx 0 22rpx;
+  border: 1rpx solid var(--yb-chip-border);
+  border-radius: 999rpx;
+  background: var(--yb-surface);
+  color: var(--yb-primary);
+  font-size: 26rpx;
+  font-weight: 600;
+  line-height: 1.2;
+  transition: background-color 0.18s ease, border-color 0.18s ease, transform 0.14s ease;
+}
+
+.back-home.is-press {
+  transform: scale(0.94);
+}
+
+/* 箭头用两条边框转 45° 画：字面的「‹」小字号下发虚，而且各端字形不一样。 */
+.back-chevron {
+  width: 14rpx;
+  height: 14rpx;
+  border-left: 3rpx solid currentColor;
+  border-bottom: 3rpx solid currentColor;
+  transform: rotate(45deg);
+}
+
+.back-where {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  color: var(--yb-text-3);
+  font-size: 24rpx;
+  text-align: right;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  min-height: 96rpx;
+  padding: 8rpx 20rpx 8rpx 28rpx;
+  background: var(--yb-surface);
+  border: 1rpx solid var(--yb-search-border);
+  border-radius: 56rpx;
+  box-shadow: var(--yb-search-shadow);
+  transition: border-color 0.25s cubic-bezier(0.22, 0.8, 0.3, 1), box-shadow 0.25s cubic-bezier(0.22, 0.8, 0.3, 1), transform 0.25s cubic-bezier(0.22, 0.8, 0.3, 1);
+}
+
+.search-box.is-on {
+  border-color: var(--yb-search-focus-border);
+  box-shadow: var(--yb-search-focus-shadow);
+  transform: scale(1.012);
+}
+
+.search-icon {
+  flex: none;
+  width: 40rpx;
+  height: 40rpx;
+  color: var(--yb-icon-muted);
+}
+
+.search-input {
+  flex: 1;
+  min-width: 0;
+  height: 80rpx;
+  border: 0;
+  background: transparent;
+  color: var(--yb-text);
+  font-size: 32rpx;
+}
+
+/* 占位提示是原生 input 的单行文本，超出直接裁掉，不会换行。它和输入的字共用同一个字号时，
+   首页那句「搜索项目名称、编码或拼音，如 血液透析、xytx」在图标、清空按钮和搜索按钮挤在
+   同一行的宽度里放不下，尾巴被切掉。单独给占位符一个小字号，输入的字仍是 32rpx。
+   小程序端 placeholder-class 直接作用在原生占位文字上，H5 端它落在 .uni-input-placeholder 上，
+   所以两边都要写。 */
+.search-placeholder,
+.uni-input-placeholder.search-placeholder {
+  color: var(--yb-text-3);
+  font-size: 25rpx;
+}
+
+/* 图谱页的搜索框更窄，「搜索药品、项目或耗材，换个中心」同样被裁。这条必须放在全局样式里：
+   小程序的 placeholder-class 作用在原生占位元素上，页面 scoped 样式会给类名追加 data 属性，
+   原生元素带不上，规则就匹配不到。 */
+.graph-search-placeholder,
+.uni-input-placeholder.graph-search-placeholder {
+  color: var(--yb-text-3);
+  font-size: 22rpx;
+}
+
+.search-clear {
+  flex: none;
+  width: 64rpx;
+  height: 64rpx;
+  border: 0;
+  border-radius: 50%;
+  background: var(--yb-clear-bg);
+  color: var(--yb-text-3);
+  font-size: 40rpx;
+  line-height: 64rpx;
+  text-align: center;
+  transition: transform 0.16s ease, opacity 0.16s ease, background 0.16s ease;
+}
+
+.search-clear.is-hidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+
+.chips-left {
+  justify-content: flex-start;
+  margin-top: 20rpx;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 72rpx;
+  padding: 12rpx 28rpx;
+  border: 1rpx solid var(--yb-chip-border);
+  border-radius: 999rpx;
+  background: var(--yb-surface);
+  color: var(--yb-text-2);
+  font-size: 26rpx;
+  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.16s ease, opacity 0.16s ease;
+}
+
+.chip.is-on,
+.chip-ghost {
+  color: var(--yb-primary);
+  border-color: var(--yb-chip-on-border);
+  background: var(--yb-primary-soft);
+}
+
+.chip-history {
+  padding: 0 8rpx 0 28rpx;
+}
+
+.chip-text {
+  max-width: 14em;
+  overflow: hidden;
+  padding: 16rpx 8rpx 16rpx 0;
+  color: inherit;
+  font-size: 26rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.chip-x {
+  width: 56rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  text-align: center;
+  color: var(--yb-chip-x);
+  font-size: 32rpx;
+}
+
+.chip-hint {
+  margin-left: 12rpx;
+  color: var(--yb-text-3);
+  font-style: normal;
+  font-size: 22rpx;
+}
+
+.home-notice {
+  margin: 28rpx 0 0;
+  padding: 20rpx 28rpx;
+  border-radius: 24rpx;
+  background: var(--yb-notice-bg);
+  color: var(--yb-notice-fg);
+  font-size: 26rpx;
+  line-height: 1.55;
+}
+
+.home-suggest {
+  display: flex;
+  flex-direction: column;
+  gap: 36rpx;
+  margin-top: 40rpx;
+}
+
+.home-block-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24rpx;
+}
+
+.home-block-head .h {
+  color: var(--yb-text-3);
+  font-size: 26rpx;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+}
+
+.history-more {
+  color: var(--yb-primary);
+  font-size: 26rpx;
+  font-weight: 650;
+}
+
+.result-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12rpx 24rpx;
+  margin: 16rpx 0 24rpx;
+  color: var(--yb-text-3);
+  font-size: 26rpx;
+}
+
+.result-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 24rpx;
+  background: var(--yb-surface);
+  border: 1rpx solid var(--yb-border);
+  border-radius: 28rpx;
+  transition: transform 0.16s ease, opacity 0.16s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.result-card.is-stopped {
+  border-color: var(--yb-card-stopped-border);
+  background: var(--yb-card-stopped-bg);
+}
+
+.result-card.is-merged {
+  border-color: var(--yb-card-merged-border);
+}
+
+.result-card.is-soon {
+  border-color: var(--yb-card-soon-border);
+}
+
+.result-card.is-pending {
+  border-color: var(--yb-card-pending-border);
+  background: var(--yb-card-pending-bg);
+}
+
+.status-strip {
+  padding: 16rpx 28rpx;
+  font-size: 26rpx;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.status-strip.stop {
+  color: #fff;
+  background: var(--yb-stop-bg);
+}
+
+.status-strip.merge {
+  color: var(--yb-merge);
+  background: var(--yb-merge-bg);
+}
+
+.status-strip.soon {
+  color: var(--yb-soon-fg);
+  background: var(--yb-soon-bg);
+}
+
+.status-strip.pending {
+  color: var(--yb-pending-fg);
+  background: var(--yb-pending-bg);
+}
+
+.result-main {
+  padding: 28rpx 28rpx 24rpx;
+}
+
+.result-name {
+  display: -webkit-box;
+  overflow: hidden;
+  /* 长英文名可能整段没有空格，不许把卡片撑宽 */
+  word-break: break-word;
+  font-size: 34rpx;
+  font-weight: 650;
+  line-height: 1.35;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* 名字太长就降一档字号，档位怎么标定的见 src/lib/fit.ts。缩到最小档时两行还是装不下
+   目录里最长的那些（52 个视觉宽度单位，比如「单光子发射断层显像（SPECT）…」），
+   所以 2、3 档放宽到三行 —— 宁可卡片高一点，也不要名字被省略号切掉。 */
+.result-name.fit-1 { font-size: 31rpx; }
+.result-name.fit-2 { font-size: 28rpx; -webkit-line-clamp: 3; }
+.result-name.fit-3 { font-size: 25rpx; -webkit-line-clamp: 3; }
+
+.result-name.is-stopped {
+  text-decoration: line-through;
+  text-decoration-thickness: 4rpx;
+  text-decoration-color: var(--yb-danger);
+}
+
+.result-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx 20rpx;
+  margin-top: 16rpx;
+  color: var(--yb-text-3);
+  font-size: 24rpx;
+}
+
+.price-live,
+.price-dead,
+.price-future {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 16rpx;
+  margin-top: 24rpx;
+}
+
+.price-live text.label,
+.price-dead text.label,
+.price-future text.label {
+  color: var(--yb-text-3);
+  font-size: 24rpx;
+}
+
+.price-live .num {
+  color: var(--yb-now);
+  font-size: 56rpx;
+  font-weight: 720;
+  letter-spacing: -0.03em;
+}
+
+.price-future .num {
+  color: var(--yb-future);
+  font-size: 32rpx;
+  font-weight: 650;
+}
+
+.price-dead .num {
+  color: var(--yb-stopped-title);
+  font-size: 48rpx;
+  font-weight: 650;
+  text-decoration: line-through;
+}
+
+.price-live .num.is-empty,
+.price-future .num.is-empty,
+.price-dead .num.is-empty {
+  color: var(--yb-text-3);
+  font-size: 36rpx;
+  font-weight: 650;
+  letter-spacing: 0;
+  text-decoration: none;
+}
+
+.price-live .lv,
+.price-dead .lv,
+.price-future .lv {
+  font-size: 24rpx;
+  font-style: normal;
+}
+
+.price-dead .lv {
+  color: var(--yb-danger);
+  font-weight: 700;
+}
+
+.price-blocked {
+  margin-top: 24rpx;
+  color: var(--yb-price-blocked);
+  font-size: 32rpx;
+  font-weight: 720;
+}
+
+.result-note {
+  display: -webkit-box;
+  margin: 16rpx 0 0;
+  overflow: hidden;
+  color: var(--yb-text-2);
+  font-size: 26rpx;
+  line-height: 1.55;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.guide-sheet {
+  margin: 0 28rpx 24rpx;
+  padding: 20rpx 24rpx;
+  border: 1rpx solid var(--yb-chip-on-border);
+  border-radius: 20rpx;
+  background: var(--yb-primary-soft);
+}
+
+.guide-sheet.is-block {
+  margin: 0;
+}
+
+.guide-sheet .h {
+  margin: 0 0 16rpx;
+  color: var(--yb-notice-fg);
+  font-size: 24rpx;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+}
+
+.guide-row {
+  margin: 0 0 16rpx;
+}
+
+.guide-row:last-child {
+  margin-bottom: 0;
+}
+
+.guide-row .dt {
+  margin: 0 0 4rpx;
+  color: var(--yb-text-3);
+  font-size: 24rpx;
+  font-weight: 700;
+}
+
+.guide-row .dd {
+  color: var(--yb-text);
+  font-size: 26rpx;
+  line-height: 1.65;
+  white-space: pre-wrap;
+}
+
+.guide-sheet.is-missing,
+.guide-sheet.is-loading {
+  background: var(--yb-soon-bg);
+  border-color: var(--yb-soon-border);
+}
+
+.guide-sheet.is-missing .p,
+.guide-sheet.is-loading .p {
+  margin: 0;
+  color: var(--yb-soon-fg);
+  font-size: 26rpx;
+  font-weight: 650;
+  line-height: 1.55;
+}
+
+.result-cta {
+  width: 100%;
+  min-height: 88rpx;
+  padding: 20rpx 28rpx;
+  border-top: 1rpx solid var(--yb-border);
+  background: var(--yb-cta-merge-bg);
+  color: var(--yb-cta-merge-fg);
+  font-size: 28rpx;
+  font-weight: 650;
+  text-align: left;
+  transition: transform 0.16s ease, opacity 0.16s ease;
+}
+
+.result-card.is-stopped .result-cta {
+  background: var(--yb-cta-stop-bg);
+  color: var(--yb-cta-stop-fg);
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  gap: 4rpx;
+  margin-bottom: 20rpx;
+  padding: 20rpx 24rpx;
+  border-radius: 20rpx;
+}
+
+.banner .t {
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.banner .s {
+  font-size: 26rpx;
+}
+
+.banner-stop {
+  color: #fff;
+  background: var(--yb-stop-bg);
+}
+
+.banner-merge {
+  color: var(--yb-banner-merge-fg);
+  background: var(--yb-merge-bg);
+  border: 1rpx solid var(--yb-banner-merge-border);
+}
+
+.banner-now {
+  color: var(--yb-now-banner-fg);
+  background: var(--yb-now-banner-bg);
+  border: 1rpx solid var(--yb-now-banner-border);
+}
+
+.banner-pending {
+  color: var(--yb-pending-banner-fg);
+  background: var(--yb-pending-banner-bg);
+  border: 1rpx solid var(--yb-pending-border);
+}
+
+.current-price {
+  color: var(--yb-now);
+  font-size: 32rpx;
+  font-weight: 650;
+}
+
+.current-price.is-next {
+  margin-top: 8rpx;
+  color: var(--yb-future);
+}
+
+.current-price.is-dead {
+  color: var(--yb-text-3);
+}
+
+.drawer-head .name {
+  margin: 0 0 20rpx;
+  font-size: 44rpx;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.drawer-head .name.is-stopped {
+  text-decoration: line-through;
+  text-decoration-color: var(--yb-danger);
+}
+
+/* 详情页标题行数不限，所以缩得比卡片轻：只把过长的标题收紧一档。 */
+.drawer-head .name.fit-1 { font-size: 40rpx; }
+.drawer-head .name.fit-2 { font-size: 37rpx; }
+.drawer-head .name.fit-3 { font-size: 34rpx; }
+
+.section-label {
+  margin: 0 0 16rpx;
+  font-size: 26rpx;
+  font-weight: 700;
+}
+
+.surface {
+  margin-bottom: 24rpx;
+  padding: 28rpx;
+  background: var(--yb-surface);
+  border: 1rpx solid var(--yb-border);
+  border-radius: 28rpx;
+}
+
+.desc-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 24rpx;
+  padding: 16rpx 0;
+  border-bottom: 1rpx solid var(--yb-border);
+  font-size: 28rpx;
+}
+
+.desc-row:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.desc-row .k {
+  color: var(--yb-text-3);
+  flex: none;
+}
+
+.desc-row .v {
+  text-align: right;
+  word-break: break-all;
+}
+
+.alert {
+  margin: 0 0 24rpx;
+  padding: 20rpx 24rpx;
+  border-radius: 20rpx;
+}
+
+.alert-danger {
+  background: var(--yb-alert-danger-bg);
+  color: var(--yb-alert-danger-fg);
+}
+
+.alert-ok {
+  background: var(--yb-now-banner-bg);
+  color: var(--yb-now-banner-fg);
+  border: 1rpx solid var(--yb-now-banner-border);
+}
+
+.alert-info {
+  background: var(--yb-pending-banner-bg);
+  color: var(--yb-pending-banner-fg);
+  border: 1rpx solid var(--yb-pending-border);
+}
+
+.alert .t {
+  margin-bottom: 12rpx;
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.jump {
+  color: var(--yb-primary);
+  font-weight: 650;
+}
+
+.alert-danger .jump {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.alert-code {
+  color: var(--yb-text-3);
+  font-size: 24rpx;
+}
+
+.hop-list {
+  margin: 0 28rpx 24rpx;
+}
+
+.drawer-block > .hop-list {
+  margin: 0;
+}
+
+.hop-note {
+  margin-top: 8rpx;
+  color: var(--yb-text-3);
+  font-size: 24rpx;
+  line-height: 1.5;
+}
+
+.history-list {
+  padding-left: 8rpx;
+}
+
+.history-item {
+  position: relative;
+  padding: 0 0 28rpx 32rpx;
+  border-left: 4rpx solid var(--yb-history-rail);
+}
+
+.history-item:last-child {
+  padding-bottom: 0;
+}
+
+.history-dot {
+  position: absolute;
+  top: 12rpx;
+  left: -10rpx;
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  background: var(--yb-now);
+}
+
+.history-item.is-future .history-dot,
+.history-item.is-future .ht {
+  color: var(--yb-future);
+}
+
+.history-item.is-future .history-dot {
+  background: var(--yb-future);
+}
+
+.history-item.is-now .ht {
+  color: var(--yb-now-strong);
+}
+
+.history-item.is-now .history-dot {
+  background: var(--yb-now);
+}
+
+.history-item.is-dead .ht {
+  color: var(--yb-danger);
+}
+
+.history-item.is-dead .history-dot {
+  background: var(--yb-danger);
+}
+
+.history-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16rpx;
+  font-size: 28rpx;
+}
+
+.history-top .at {
+  color: var(--yb-text-3);
+  font-size: 24rpx;
+  white-space: nowrap;
+}
+
+.history-prices {
+  margin-top: 4rpx;
+  color: var(--yb-text-2);
+  font-size: 26rpx;
+}
+
+.yb-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 88rpx;
+  padding: 0 32rpx;
+  border-radius: 999rpx;
+  background: var(--yb-btn);
+  color: var(--yb-btn-fg);
+  font-size: 30rpx;
+  font-weight: 650;
+  transition: transform 0.16s ease, opacity 0.16s ease, background 0.18s ease;
+}
+
+.yb-btn.is-ghost {
+  background: var(--yb-primary-soft);
+  color: var(--yb-primary);
+  border: 1rpx solid var(--yb-chip-on-border);
+}
+
+.yb-btn.is-off {
+  opacity: 0.45;
+}
+
+.level-switch {
+  display: flex;
+  padding: 6rpx;
+  background: var(--yb-level-track);
+  border-radius: 999rpx;
+}
+
+.level-switch .opt {
+  flex: 1;
+  min-height: 64rpx;
+  line-height: 64rpx;
+  text-align: center;
+  border-radius: 999rpx;
+  color: var(--yb-text-2);
+  font-size: 26rpx;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.16s ease;
+}
+
+.level-switch .opt.is-on {
+  background: var(--yb-surface);
+  color: var(--yb-text);
+  font-weight: 600;
+  box-shadow: 0 2rpx 6rpx rgba(26, 29, 38, 0.12);
+}
+
+.pad {
+  padding: 48rpx 16rpx;
+  text-align: center;
+}
+
+.site-foot {
+  margin-top: 12rpx;
+  color: var(--yb-text-3);
+  font-size: 24rpx;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* 页脚的反馈入口：以前是一行 24rpx 的小字，点上去只有字那么一小条，像没反应。
+   现在按其它胶囊的样子做，可点面积够大；文案用 contact.action，自带微信号。 */
+.site-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 64rpx;
+  margin-top: 16rpx;
+  padding: 0 28rpx;
+  border: 1rpx solid var(--yb-chip-border);
+  border-radius: 999rpx;
+  background: var(--yb-surface);
+  color: var(--yb-primary);
+  font-weight: 600;
+  transition: background-color 0.18s ease, border-color 0.18s ease, transform 0.14s ease;
+}
+
+.site-link.is-press {
+  transform: scale(0.96);
+}
+
+.filter-row {
+  margin: 20rpx 0 8rpx;
+}
+
+.cats-scroll {
+  white-space: nowrap;
+  margin: 8rpx 0 16rpx;
+}
+
+.cats-scroll .chip {
+  margin-right: 16rpx;
+}
+
+.member-card {
+  margin: 8rpx 0 24rpx;
+  padding: 40rpx 32rpx 32rpx;
+  border-radius: 36rpx;
+  background: linear-gradient(160deg, #edf2ff 0%, var(--yb-surface) 55%);
+  border: 1rpx solid var(--yb-chip-on-border);
+  color: var(--yb-text);
+  transition: background 0.35s ease, border-color 0.35s ease, color 0.35s ease;
+}
+
+.member-card.is-guest {
+  background: var(--yb-surface);
+  border-color: var(--yb-border);
+}
+
+.member-card.is-member {
+  background: linear-gradient(160deg, #edf2ff 0%, var(--yb-surface) 62%);
+}
+
+.member-card.is-silver {
+  background: linear-gradient(160deg, #eef2f6 0%, #f7f8fb 58%);
+  border-color: #c5ced8;
+}
+
+.member-card.is-gold {
+  background: linear-gradient(160deg, #fff4e5 0%, #fffaf2 58%);
+  border-color: var(--yb-soon-border);
+}
+
+.member-card.is-platinum {
+  background: linear-gradient(160deg, #1a2030 0%, #2c3548 70%);
+  border-color: #4a5568;
+  color: #e8ecf4;
+}
+
+.member-card.is-platinum .member-kicker,
+.member-card.is-platinum .member-since,
+.member-card.is-platinum .member-hint,
+.member-card.is-platinum .stat .k {
+  color: #b4bdcc;
+}
+
+.member-head {
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+  margin-bottom: 8rpx;
+}
+
+.member-logo {
+  display: block;
+  width: 112rpx;
+  height: 112rpx;
+  flex: none;
+  margin: 0;
+  border-radius: 50%;
+  background: transparent;
+  border: 1rpx solid var(--yb-border);
+  box-sizing: border-box;
+}
+
+.member-logo.is-empty {
+  background: transparent;
+}
+
+.member-meta {
+  min-width: 0;
+  flex: 1;
+}
+
+.member-name {
+  overflow: hidden;
+  font-size: 36rpx;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.member-sub {
+  margin-top: 6rpx;
+  color: var(--yb-text-3);
+  font-size: 24rpx;
+}
+
+.member-kicker {
+  text-align: center;
+  color: var(--yb-text-3);
+  font-size: 24rpx;
+  letter-spacing: 0.12em;
+}
+
+.member-tier {
+  margin: 8rpx 0 4rpx;
+  text-align: center;
+  font-size: 48rpx;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.member-since {
+  text-align: center;
+  color: var(--yb-text-3);
+  font-size: 24rpx;
+}
+
+.member-stats {
+  display: flex;
+  margin: 32rpx 0 20rpx;
+}
+
+.member-stats .stat {
+  flex: 1;
+  text-align: center;
+}
+
+.member-stats .n {
+  font-size: 36rpx;
+  font-weight: 700;
+}
+
+.member-stats .k {
+  margin-top: 4rpx;
+  color: var(--yb-text-3);
+  font-size: 22rpx;
+}
+
+.member-bar {
+  height: 12rpx;
+  border-radius: 999rpx;
+  background: rgba(26, 29, 38, 0.08);
+  overflow: hidden;
+}
+
+.member-card.is-platinum .member-bar {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.member-bar .fill {
+  width: 0;
+  height: 100%;
+  border-radius: 999rpx;
+  background: var(--yb-primary);
+  transition: width 0.55s ease;
+}
+
+.member-card.is-gold .member-bar .fill {
+  background: var(--yb-merge);
+}
+
+.member-card.is-platinum .member-bar .fill {
+  background: #e8ecf4;
+}
+
+.member-hint {
+  margin: 16rpx 0 20rpx;
+  text-align: center;
+  color: var(--yb-text-2);
+  font-size: 24rpx;
+}
+
+.theme-dark .member-card.is-member,
+.theme-dark .member-card.is-guest {
+  background: linear-gradient(160deg, #1a2748 0%, var(--yb-surface) 62%);
+}
+
+.theme-dark .member-card.is-silver {
+  background: linear-gradient(160deg, #2a3140 0%, var(--yb-surface) 62%);
+}
+
+.theme-dark .member-card.is-gold {
+  background: linear-gradient(160deg, #3a2714 0%, var(--yb-surface) 62%);
+}
+
+/* Tibetan stacks taller than Chinese and English labels are often wider. */
+.lang-bo {
+  font-family: "QhybTibetan", "Noto Serif Tibetan", "Microsoft Himalaya", "Tibetan Machine Uni", sans-serif;
+  line-height: 1.75;
+}
+
+.lang-bo .hero-kicker,
+.lang-bo .hero-copy .hero-title,
+.lang-bo .section-label,
+.lang-bo .status-strip,
+.lang-bo .drawer-head .name,
+.lang-bo .member-name {
+  letter-spacing: 0;
+}
+
+.lang-bo .hero-copy .hero-title {
+  font-size: 36rpx;
+  line-height: 1.65;
+}
+
+.lang-bo .chip,
+.lang-bo .yb-btn,
+.lang-bo .level-switch .opt {
+  min-height: 84rpx;
+  height: auto;
+  line-height: 1.75;
+}
+
+.lang-bo .chip,
+.lang-bo .yb-btn {
+  padding-top: 12rpx;
+  padding-bottom: 12rpx;
+}
+
+.lang-bo .status-strip,
+.lang-bo .banner .s,
+.lang-bo .home-notice,
+.lang-bo .guide-row .dd,
+.lang-bo .hop-note,
+.lang-bo .result-note,
+.lang-bo .member-sub,
+.lang-bo .member-hint,
+.lang-bo .site-foot {
+  line-height: 1.85;
+}
+
+.lang-bo .result-name,
+.lang-bo .drawer-head .name {
+  line-height: 1.65;
+}
+
+/* 藏文叠字比汉字高，顶栏和页脚那两颗胶囊要留够高度 */
+.lang-bo .back-home,
+.lang-bo .site-link {
+  min-height: 80rpx;
+}
+
+.lang-bo .desc-row,
+.lang-en .desc-row {
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.lang-bo .desc-row .k,
+.lang-en .desc-row .k {
+  max-width: 44%;
+  line-height: 1.55;
+}
+
+.lang-bo .desc-row .v,
+.lang-en .desc-row .v {
+  min-width: 46%;
+  flex: 1;
+  line-height: 1.65;
+}
+
+.lang-en .hero-copy .hero-title {
+  font-size: 34rpx;
+  line-height: 1.3;
+}
+
+.lang-en .status-strip,
+.lang-en .banner .s,
+.lang-en .member-sub,
+.lang-en .member-stats .k {
+  line-height: 1.45;
+}
+
+.lang-en .member-stats .stat {
+  padding: 0 6rpx;
+}
+
+.lang-en .level-switch .opt {
+  min-height: 72rpx;
+  padding: 8rpx 6rpx;
+  line-height: 1.25;
+}
+
+
+@keyframes yb-in {
+  from {
+    opacity: 0;
+    transform: translateY(20rpx);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes yb-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.yb-in {
+  animation: yb-in 0.42s cubic-bezier(0.22, 0.8, 0.3, 1) both;
+}
+
+.yb-in-2 {
+  animation-delay: 0.06s;
+}
+
+.yb-in-3 {
+  animation-delay: 0.12s;
+}
+
+.yb-in-4 {
+  animation-delay: 0.18s;
+}
+
+.hero-logo,
+.member-logo {
+  animation: yb-pop 0.5s cubic-bezier(0.22, 0.8, 0.3, 1) both;
+}
+
+/* 载入进度条。带真实百分比时亮条按宽度长（transition 兜住跳变），拿不到总量的
+   分片请求走 .is-sweep 来回扫。两条都用同一个 yb-sweep 节奏，和 yb-in 一致。 */
+@keyframes yb-sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(300%);
+  }
+}
+
+.load-bar {
+  margin: 28rpx 0 8rpx;
+}
+
+.load-bar.is-inline {
+  margin: 10rpx 0 4rpx;
+}
+
+.load-track {
+  height: 6rpx;
+  border-radius: 999rpx;
+  background: var(--yb-level-track);
+  overflow: hidden;
+}
+
+.load-bar.is-inline .load-track {
+  height: 4rpx;
+}
+
+.load-fill {
+  height: 100%;
+  border-radius: 999rpx;
+  background: linear-gradient(90deg, var(--yb-primary), #6f9bff);
+  transition: width 0.28s cubic-bezier(0.22, 0.8, 0.3, 1);
+}
+
+.load-fill.is-sweep {
+  width: 34%;
+  animation: yb-sweep 1.1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.is-press {
+  transform: scale(0.97);
+  opacity: 0.88;
+  transition: transform 0.12s ease, opacity 0.12s ease;
+}
+
+.yb-btn.is-press {
+  transform: scale(0.98);
+}
+
+
+.result-cta.is-press {
+  transform: scale(0.98);
+  opacity: 0.88;
+}
+
+.result-list > .result-row {
+  animation: yb-in 0.32s cubic-bezier(0.22, 0.8, 0.3, 1) both;
+}
+
+/* 同一批结果在屏幕上停留时不重复播入场；换了关键词（is-fresh 被重新加上）才再播一次。 */
+.result-list:not(.is-fresh) > .result-row {
+  animation: none;
+}
+
+.result-list > .result-row:nth-child(2) { animation-delay: 0.03s; }
+.result-list > .result-row:nth-child(3) { animation-delay: 0.06s; }
+.result-list > .result-row:nth-child(4) { animation-delay: 0.09s; }
+.result-list > .result-row:nth-child(5) { animation-delay: 0.12s; }
+.result-list > .result-row:nth-child(6) { animation-delay: 0.15s; }
+.result-list > .result-row:nth-child(7) { animation-delay: 0.18s; }
+.result-list > .result-row:nth-child(8) { animation-delay: 0.21s; }
+
+.result-list > .result-row:nth-child(n + 9) {
+  animation: none;
+}
+
+.result-list > .result-row:nth-child(2) { animation-delay: 0.03s; }
+.result-list > .result-row:nth-child(3) { animation-delay: 0.06s; }
+.result-list > .result-row:nth-child(4) { animation-delay: 0.09s; }
+.result-list > .result-row:nth-child(5) { animation-delay: 0.12s; }
+.result-list > .result-row:nth-child(6) { animation-delay: 0.15s; }
+.result-list > .result-row:nth-child(7) { animation-delay: 0.18s; }
+.result-list > .result-row:nth-child(8) { animation-delay: 0.21s; }
+
+.result-list > .result-row:nth-child(n + 9) {
+  animation: none;
+}

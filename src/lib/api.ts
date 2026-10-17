@@ -176,6 +176,38 @@ export function mpCatalogItem(id: string) {
   return request<{ ok: boolean; item: SearchItem | null }>(`/catalog-search?id=${encodeURIComponent(id)}`, 'GET')
 }
 
+export type KgTier = 'exact' | 'synonym' | 'category' | 'curated'
+
+export type KgItemSymptoms = {
+  ok: boolean
+  found: boolean
+  disclaimer: string
+  itemId?: string
+  code?: string
+  name?: string
+  tier?: KgTier
+  tierLabel?: string
+  class?: string
+  symptoms?: string[]
+  diseases?: string[]
+  source?: string | string[]
+}
+
+export type KgSymptomLab = { itemId: string; code: string; name: string; tier: KgTier; tierLabel: string; symptom: string }
+
+/** 检验项目的「相关症状」（知识图谱经疾病推断，仅供参考）。id 用目录 id 或项目编码。 */
+export function mpKgItemSymptoms(id: string) {
+  return request<KgItemSymptoms>(`/kg/item-symptoms?id=${encodeURIComponent(id)}`, 'GET')
+}
+
+/** 症状反查「可能相关检验」，结果按 tier 排序（项目级匹配在前，同类推断、人工整理在后）。 */
+export function mpKgSymptomLabs(q: string, limit = 30) {
+  return request<{ ok: boolean; query: string; symptoms: string[]; total: number; items: KgSymptomLab[]; disclaimer: string }>(
+    `/kg/symptom-labs?q=${encodeURIComponent(q)}&limit=${limit}`,
+    'GET',
+  )
+}
+
 /** 收费项目对应的技术规范。byItem 给出全部规范编号，合并项不会被截成其中一条。 */
 export function mpNhcSpecLinks(ids: string[]) {
   const list = encodeURIComponent(ids.join(','))

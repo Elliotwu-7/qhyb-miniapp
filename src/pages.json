@@ -33,6 +33,12 @@
       }
     },
     {
+      "path": "pages/symptom/symptom",
+      "style": {
+        "navigationBarTitleText": "症状查检验"
+      }
+    },
+    {
       "path": "pages/detail/detail",
       "style": {
         "navigationBarTitleText": "项目详情"

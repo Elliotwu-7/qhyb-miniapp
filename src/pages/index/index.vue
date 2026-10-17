@@ -626,6 +626,10 @@ function openGraph() {
 }
 
 /** 参考资料汇编：全国／上海市／山东省的目录原文，和本地目录分开的一份数据。 */
+function openSymptom() {
+  uni.navigateTo({ url: '/pages/symptom/symptom' })
+}
+
 function openRef() {
   uni.navigateTo({ url: '/pages/ref/ref' })
 }
@@ -852,6 +856,11 @@ onShareTimeline(() => ({
             </view>
             <view class="entry" hover-class="is-press" :hover-stay-time="80" @click="openGraph">
               <text class="entry-title">{{ t('home.graph') }}</text>
+              <text class="entry-arrow">›</text>
+            </view>
+            <view class="entry" hover-class="is-press" :hover-stay-time="80" @click="openSymptom">
+              <text class="entry-title">症状查检验</text>
+              <text class="entry-sub">按症状找可能相关的检验项目（仅供参考）</text>
               <text class="entry-arrow">›</text>
             </view>
             <view class="entry" hover-class="is-press" :hover-stay-time="80" @click="openRef">

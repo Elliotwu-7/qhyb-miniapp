@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, shallowRef } from 'vue'
+import { computed, ref, shallowRef, watch } from 'vue'
 import { onLoad, onShareAppMessage, onShareTimeline, onShow } from '@dcloudio/uni-app'
 import ContentNotice from '../../components/ContentNotice.vue'
 import LoadingBar from '../../components/LoadingBar.vue'
@@ -12,7 +12,7 @@ import { enableShare, shareQuery } from '../../lib/share'
 import { findParentItem, mergeAtNote, resolveGuide } from '../../lib/guide'
 import { auditRuleText, categoryLabel, drugKindText, hcKindText, localeClass, payLabel, pharmacopoeiaText, t } from '../../lib/i18n'
 import { loadItemSpecs, type NhcSpecItem } from '../../lib/nhcSpec'
-import { mpCatalogItem, mpPharmacopoeia, type PharmacopoeiaHit } from '../../lib/api'
+import { mpCatalogItem, mpKgItemSymptoms, mpPharmacopoeia, type KgItemSymptoms, type PharmacopoeiaHit } from '../../lib/api'
 import { decorateHistory, drawerPrice, historyTitle, levelLabel, priceText, sortHistory } from '../../lib/price'
 import { hospitalLevel } from '../../lib/session'
 import { catalogCached, catalogReady } from '../../lib/store'
@@ -33,6 +33,27 @@ import { isConsumable, isDrug, isLimitedDrug, type AuditGroup, type HcDetail, ty
 
 const item = ref<SearchItem | null>(null)
 const { ct } = useContentTranslation(true)
+
+// 相关症状：只对实验室诊断项目取。拿不到就不显示，不影响详情其余部分。
+const kgSymptoms = ref<KgItemSymptoms | null>(null)
+const KG_TIER_TAG: Record<string, string> = { category: '同类推断', curated: '人工整理' }
+const kgTierTag = computed(() => KG_TIER_TAG[kgSymptoms.value?.tier || ''] || '')
+watch(
+  () => (item.value && item.value.cat1 === '实验室诊断' ? item.value.id : ''),
+  (id) => {
+    kgSymptoms.value = null
+    if (!id) return
+    mpKgItemSymptoms(id)
+      .then((res) => {
+        if (item.value && item.value.id === id && res.found && res.symptoms && res.symptoms.length) kgSymptoms.value = res
+      })
+      .catch(() => {})
+  },
+  { immediate: true },
+)
+function openSymptom(word: string) {
+  uni.navigateTo({ url: `/pages/symptom/symptom?q=${encodeURIComponent(word)}` })
+}
 const detail = ref<ItemDetail | null>(null)
 const parent = ref<SearchItem | null>(null)
 const parentDetail = ref<ItemDetail | null>(null)
@@ -560,6 +581,18 @@ onShareTimeline(() => {
         <view v-for="(hit, i) in pharmaHits" :key="i" class="usage-body">{{ pharmacopoeiaText(hit) }}</view>
       </view>
 
+      <!-- 相关症状（知识图谱经疾病推断）。category/curated 标出来，exact/synonym 不加标签。 -->
+      <view v-if="kgSymptoms" class="usage-block kg-block">
+        <view class="usage-head">
+          <text class="usage-title">相关症状</text>
+          <text v-if="kgTierTag" class="kg-tag">{{ kgTierTag }}</text>
+        </view>
+        <view class="kg-chips">
+          <text v-for="word in kgSymptoms.symptoms" :key="word" class="kg-chip" hover-class="is-press" :hover-stay-time="80" @click="openSymptom(word)">{{ word }}</text>
+        </view>
+        <view class="muted kg-note">仅供参考，不作诊断依据</view>
+      </view>
+
       <!-- 类别级「使用说明」：目录原文入口上方先给出来。这一段是整章通用说明（有的章
            没有），文字长，先折起几行，点一下展开看全。 -->
       <view v-if="!drug && !consumable && usageNote" class="usage-block">
@@ -1081,4 +1114,8 @@ onShareTimeline(() => {
   color: var(--yb-text-3);
   font-size: 23rpx;
 }
+.kg-chips { display: flex; flex-wrap: wrap; gap: 12rpx; margin-top: 12rpx; }
+.kg-chip { padding: 6rpx 18rpx; border-radius: 999rpx; background: var(--yb-soft, #eef3fa); font-size: 26rpx; }
+.kg-tag { margin-left: 12rpx; padding: 2rpx 12rpx; border-radius: 8rpx; font-size: 22rpx; color: #b26a00; background: #fff4e0; }
+.kg-note { margin-top: 12rpx; font-size: 22rpx; }
 </style>
